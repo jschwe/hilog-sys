@@ -20,6 +20,10 @@
 #[allow(non_snake_case)]
 mod ffi;
 
+#[cfg(feature = "hilog-base")]
+#[cfg_attr(docsrs, doc(cfg(feature = "hilog-base")))]
+pub mod hilog_base;
+
 pub use ffi::*;
 
 #[cfg(feature = "log")]
