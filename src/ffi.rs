@@ -18,7 +18,8 @@ Currently, <b>LOG_APP</b> is available. \n
 
 @since 8*/
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
-pub struct LogType(pub ::core::ffi::c_uint);
+pub struct LogType(pub(crate) core::ffi::c_uint);
+
 impl LogLevel {
     /// Debug level to be used by {@link OH_LOG_DEBUG}
     pub const LOG_DEBUG: LogLevel = LogLevel(3);
@@ -55,7 +56,7 @@ not occur.</li></ul> \n
 
 @since 8*/
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
-pub struct LogLevel(pub ::core::ffi::c_uint);
+pub struct LogLevel(pub(crate) core::ffi::c_uint);
 extern "C" {
     /** @brief Outputs logs.
 
